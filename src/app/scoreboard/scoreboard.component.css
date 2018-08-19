@@ -1,0 +1,11 @@
+select.selectpicker {
+    display: block;
+    margin: 0 auto;
+    background-color: rgb(42, 57, 84);
+    width:20%; 
+    height:5%;
+    border-radius: 8px;
+    position: absolute;
+    left: 10px;
+}
+

@@ -1,0 +1,5 @@
+.table tr td{
+    background-color:brown;
+    color: white;
+    border: 5px solid black;
+  }

@@ -1,0 +1,29 @@
+<div  class="row boardandlauncher">
+<div class="battleboard">
+   <div class="gameStatus" >
+   <h3>{{playerName1}}</h3> 
+   <h3>{{playerName2}}</h3>
+</div>
+  <div class="board" *ngFor="let row of [0,1,2]">
+    <app-battle-board-table *ngFor="let col of [0,1,2]"
+    [state]="squares[col+row*3]"
+    (click)="placeRockets(col+row*3)">
+    </app-battle-board-table>
+  </div>
+  <button class="restart" (click)="restartGame()">New Game</button>
+</div>
+
+<div class="player1" *ngIf="playerName1=='Player1'">
+  <h5 style="color:#00FF7F;">Player 2 Launcher</h5>
+ <app-rocket-launcher
+ (rocketlaunched)="onrocketlaunched($event,'player2')">
+</app-rocket-launcher>
+</div>
+
+    <div class="player2" *ngIf="playerName2=='Player2'">
+    <h5  style="color:#F4A460;">Player 1 Launcher</h5>
+      <app-rocket-launcher
+      (rocketlaunched)="onrocketlaunched($event,'player1')"
+     ></app-rocket-launcher>
+     </div>
+    </div>

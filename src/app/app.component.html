@@ -1,0 +1,13 @@
+
+ <app-alerts class="applicationalerts"></app-alerts>
+ <div class="main-app">
+    <div>
+      <h1 style="color:rgba(0, 255, 242, 0.836);" >{{title}}</h1>
+    </div>
+    <app-scoreboard></app-scoreboard>
+    <div class="row">
+    <app-battle-board [playerName1]="Player1"class="col-md-6"></app-battle-board>
+    <app-battle-board [playerName2]="Player2" class="col-md-6"></app-battle-board>
+  </div>
+  </div>
+
